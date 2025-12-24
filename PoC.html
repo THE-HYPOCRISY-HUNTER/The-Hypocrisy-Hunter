@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security PoC Landing</title>
+    <style>
+        body { font-family: system-ui, sans-serif; padding: 40px; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .alert { background: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 8px; }
+        .impact { background: #f8d7da; padding: 15px; margin: 20px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Security Demonstration</h1>
+        
+        <div class="alert">
+            <h3>Proof of Concept: Stored XSS via File Upload</h3>
+            <p><strong>You were redirected here from a Notion S3-hosted HTML file.</strong></p>
+            <p>This demonstrates that an attacker could:</p>
+        </div>
+        
+        <div class="impact">
+            <ul style="text-align: left;">
+                <li>Execute arbitrary JavaScript in victim's browser</li>
+                <li>Steal session cookies (potential account takeover)</li>
+                <li>Redirect users to malicious sites</li>
+                <li>Perform actions on behalf of the user</li>
+            </ul>
+        </div>
+        
+        <p><strong>Vulnerability:</strong> Notion S3 file upload without proper content-type validation</p>
+        <p><strong>Impact Level:</strong> High - Could lead to account compromise</p>
+        <p><small>This is a controlled security test. No actual attack occurred.</small></p>
+    </div>
+</body>
+</html>
